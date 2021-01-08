@@ -11,8 +11,8 @@ const Product = ({ item, pressHandler }) => {
 
 const styles = StyleSheet.create({
   item: {
-    padding: 16,
-    margin: 16,
+    padding: 6,
+    margin: 6,
     borderColor: 'red',
     borderWidth: 1,
     borderStyle: 'dashed',

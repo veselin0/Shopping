@@ -4,6 +4,7 @@ import {
   FlatList,
   View,
   Alert,
+  Text,
   TouchableWithoutFeedback,
   Keyboard,
 } from 'react-native';
@@ -37,43 +38,33 @@ const ListScreen = () => {
   };
 
   return (
-    <TouchableWithoutFeedback
-      onPress={() => {
-        Keyboard.dismiss();
-      }}>
-      <View style={styles.container}>
-        <Header />
-        <View style={styles.content}>
-          <AddProduct submitHandler={submitHandler} />
-          <View style={styles.list}>
-            <FlatList
-              keyExtractor={(item) => item.key}
-              data={products}
-              renderItem={({ item }) => (
-                <Product item={item} pressHandler={pressHandler} />
-              )}
-            />
-          </View>
+    <View style={styles.container}>
+      <Header />
+      <View style={styles.content}>
+        <AddProduct submitHandler={submitHandler} />
+        <View style={styles.list}>
+          <FlatList
+            keyExtractor={(item) => item.key}
+            data={products}
+            renderItem={({ item }) => (
+              <Product item={item} pressHandler={pressHandler} />
+            )}
+          />
         </View>
       </View>
-    </TouchableWithoutFeedback>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    borderWidth: 3,
-    borderColor: 'red',
+    backgroundColor: '#fff',
   },
   content: {
-    borderWidth: 3,
-    borderColor: 'green',
     padding: 40,
   },
   list: {
-    borderWidth: 3,
-    borderColor: 'blue',
-    marginTop: 20,
+    padding: 20,
   },
 });
 
