@@ -1,11 +1,11 @@
 import React from 'react';
 import { StyleSheet, View, Text } from 'react-native';
-import TextInputScreen from './src/components/TextInputScreen';
+import ListScreen from './src/components/ListScreen';
 
 const App = () => {
   return (
     <View>
-      <TextInputScreen />
+      <ListScreen />
     </View>
   );
 };
